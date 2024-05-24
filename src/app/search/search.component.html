@@ -1,0 +1,21 @@
+<div
+  style="width: auto; height: 40rem"
+  class="d-flex flex-column justify-content-center align-items-center"
+>
+  <h2 class="mb-5">{{ brandName }}</h2>
+  <input
+    class="py-2 px-4 rounded-5 border-1 w-50"
+    type="text"
+    placeholder="Search for a Recipe.."
+    (keydown)="inputFromSearch($event)"
+  />
+
+  <button (click)="fetchData()" class="btn btn-dark px-5 rounded-5 mt-3">
+    Search
+  </button>
+</div>
+
+<app-displaydata
+  [sQuery]="SearchQuery"
+  [getRecipeData]="data"
+></app-displaydata>
