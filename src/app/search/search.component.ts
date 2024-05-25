@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class SearchComponent implements OnInit {
   API_KEY: string = 'a64c9cbb86234cc3b08d0ed9dd08faae';
 
-  SearchQuery: string = 'Paneer';
+  SearchQuery: string = ' ';
 
   httpClient = inject(HttpClient);
   data: any = [];
